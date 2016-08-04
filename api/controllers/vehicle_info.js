@@ -33,7 +33,7 @@ function vehicleInfo(req, res) {
 			var doorCount=0;
 			smartCarData.vin=gmResponse.vin.value;
 			smartCarData.color=gmResponse.vin.value;
-			gmResponse.fourDoorSedan.value == 'True'?	doorCount=4 : (gmResponse.twoDoorCoupe.value == 'True'? doorCount=2 : doorCount=0);
+			gmResponse.fourDoorSedan.value == 'True'? doorCount=4 : (gmResponse.twoDoorCoupe.value == 'True'? doorCount=2 : doorCount=0);
 			smartCarData.doorCount=doorCount;
 			smartCarData.driverTrain=gmResponse.vin.value;
 		  res.json(smartCarData);

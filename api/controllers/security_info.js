@@ -29,8 +29,8 @@ function securityInfo(req, res) {
 			if(result.status!=200)
 				res.json({"status":result.status,"error":result.reason});
 			var gmDoorResponse = result.data.doors.values;
-			var smartCarData=[];
-			var doors={}
+			var smartCarData = [];
+			var doors = {}
 			for (var i = gmDoorResponse.length - 1; i >= 0; i--) {
 				smartCarData.push({"location":gmDoorResponse[i].location.value ,"locked":gmDoorResponse[i].locked.value})
 			}

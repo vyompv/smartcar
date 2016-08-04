@@ -1,1 +1,1 @@
-# Skeleton project for Swagger
+# Smart Car GM's API

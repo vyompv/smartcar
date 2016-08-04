@@ -13,7 +13,7 @@ function securityInfo(req, res) {
 	  headers: { 'content-type': 'application/json' },
 	  body: { id: id, responseType: 'JSON' },
 	  json: true };
-	var result=null;
+	var result = null;
 	var promise = new Promise(function(resolve, reject) {
   	request(options, function (error, response, body) {
 		  if (error) throw new Error(error);

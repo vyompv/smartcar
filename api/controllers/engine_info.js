@@ -36,7 +36,7 @@ function engineInfo(req, res) {
 			if(result.status != 200)
 				res.json({"status":result.status,"error":result.reason});
 			var gmResponse = result.actionResult;
-			var smartCarData={};
+			var smartCarData = {};
 			var status= gmResponse.status.trim().toUpperCase();
 			status == "EXECUTED" ? smartCarData.status = "success": (status == "FAILED" ? smartCarData.status = "error" : smartCarData.status = null) ;
 		  	res.json(smartCarData);
